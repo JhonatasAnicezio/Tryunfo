@@ -10,12 +10,12 @@ class Form extends Component {
         <Input
           type='text'
           text='Nome'
-          name='input-name'
+          name='inputName'
           placeholder='nome da carta'
         />
         <Textarea
           text='Descrição'
-          name='input-description'
+          name='inputDescription'
           placeholder='descrição da carta'
         />
         { inputNumber.map((input, index) =>
@@ -30,19 +30,19 @@ class Form extends Component {
         <Input
           type='text'
           text='Imagem'
-          name='input-image'
+          name='inputImage'
           placeholder='endereço da imagem'
         />
         <Select
           text='Raridade'
-          name='input-rare'
+          name='inputRare'
           value={['normal', 'raro', 'muito raro']}
           placeholder='selecione a raridade'
         />
         <Input
           type='checkbox'
           text='super trunfo'
-          name='input-trunfo'
+          name='inputTrunfo'
         />
         <button>Salvar</button>
       </form>
