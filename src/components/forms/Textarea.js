@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Textarea({ text, name, func, value, placeholder }) {
   return (
-    <div>
+    <div className={ `container-${name}` } >
       <label htmlFor={ name }>{ text }</label>
       <textarea
         id={ name }

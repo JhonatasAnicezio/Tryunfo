@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Select({ text, name, func, value, placeholder }) {
   return (
-    <div>
+    <div className={ `container-${name}` } >
       <label htmlFor={ name }>{ text }</label>
       <select name={ name } id={ name } onChange={ func }>
         <option disabled selected>{ placeholder }</option>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Input({ type, text, name, func, value, placeholder }) {
   return (
-    <div>
+    <div className={ `container-${name}` } >
       <label htmlFor={ name }>{ text }:</label>
       <input
         type={ type }
