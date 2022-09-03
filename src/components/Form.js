@@ -6,7 +6,7 @@ import Textarea from './forms/Textarea';
 class Form extends Component {
   render() {
     return (
-      <form>
+      <form className='container-Form' >
         <Input
           type='text'
           text='Nome'
