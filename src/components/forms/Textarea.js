@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Textarea({ text, name, onChange, value, placeholder }) {
+function Textarea({ text, name, func, value, placeholder }) {
   return (
     <div>
       <label htmlFor={ name }>{ text }</label>
@@ -9,7 +9,7 @@ function Textarea({ text, name, onChange, value, placeholder }) {
         id={ name }
         name={ name }
         value={ value }
-        onChange={ onChange }
+        onChange={ func }
         placeholder={ placeholder }
       />
     </div>
@@ -20,7 +20,7 @@ Textarea.propTypes = {
   text: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+  func: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
 };
