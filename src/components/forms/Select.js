@@ -7,7 +7,7 @@ function Select({ text, name, func, value, placeholder }) {
       <label htmlFor={ name }>{ text }</label>
       <select name={ name } id={ name } onChange={ func }>
         <option disabled selected>{ placeholder }</option>
-        { value.map((val, index) => 
+        { value.map((val, index) =>
           <option
             value={ val }
             key={ index }
