@@ -6,7 +6,7 @@ function Select({ text, name, func, value, placeholder }) {
     <div>
       <label htmlFor={ name }>{ text }</label>
       <select name={ name } id={ name } onChange={ func }>
-        <option disabled select>{ placeholder }</option>
+        <option disabled selected>{ placeholder }</option>
         { value.map((val, index) => 
           <option
             value={ val }
@@ -25,7 +25,7 @@ Select.propTypes = {
   type: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   func: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.arrayOf(PropTypes.string).isRequired,
   placeholder: PropTypes.string.isRequired,
 };
 
