@@ -26,7 +26,8 @@ Input.propTypes = {
     PropTypes.string,
     PropTypes.number
   ]).isRequired,
-  placeholder: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
 };
 
+export const inputNumber = ['1','2','3'];
 export default Input;
