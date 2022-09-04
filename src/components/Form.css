@@ -1,0 +1,19 @@
+.container-Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10% 0% 0% 29%;
+  width: 40%;
+  height: 40%;
+  padding: 20px;
+  background-color: #a8763e;
+  border: solid 10px #2b2118;
+  border-radius: 5px;
+}
+
+.container-Form input{
+  margin: 10px 10px 10px 10px;
+  background-color: #f7f3e3;
+  border: solid 3px #6f1a07;
+  padding: 5px;
+}
