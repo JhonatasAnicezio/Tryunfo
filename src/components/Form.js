@@ -24,7 +24,7 @@ class Form extends Component {
           <Input
             key={ index }
             type='number'
-            text={`atributo${ input }`}
+            text={`Attr0${ input } `}
             name={`atributo${ input }`}
             placeholder={`valor attr ${ input }`}
           /> 
