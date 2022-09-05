@@ -1,19 +1,119 @@
 .container-Form {
+  width: 1440px;
+  height: 1056px;
+  left: 0px;
+  top: 0px;
+
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #3D495C;
+
+  width: 100%;
+  height: 100%;
+  background: #FAFAFA;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10% 0% 0% 29%;
-  width: 40%;
-  height: 40%;
-  padding: 20px;
-  background-color: #a8763e;
-  border: solid 10px #2b2118;
-  border-radius: 5px;
 }
 
-.container-Form input{
-  margin: 10px 10px 10px 10px;
-  background-color: #f7f3e3;
-  border: solid 3px #6f1a07;
+.container-Form h1 {
+  font-family: 'Epilogue';
+  font-size: 28px;
+  margin-bottom: 25px;
+  line-height: 29px;
+  color: #444955;
+}
+
+.container-inputName {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+.container-inputName input {
+  margin-top: 5px;
   padding: 5px;
+  border: none;
+  border-bottom: solid 1px;
+}
+
+.container-inputDescription {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.container-inputDescription textarea {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: none;
+  border-bottom: solid 1px;
+}
+
+.container-atributo1 input,
+.container-atributo2 input,
+.container-atributo3 input {
+  margin-top: 7px;
+  padding: 3px;
+}
+
+.container-inputImage {
+  margin-left: 10px;
+}
+
+.container-inputImage input {
+  margin-top: 15px;
+  margin-left: 5px;
+  width: 67%;
+  padding: 3px;
+}
+
+.container-inputRare {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container-inputRare select {
+  margin-top: 5px;
+  padding: 5px;
+  border: none;
+  border-bottom: solid 1px;
+  background-color: #FFFFFF;
+}
+
+.container-inputTrunfo {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 120px;
+}
+
+.container-inputTrunfo input {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.container-Form button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 32px;
+  color: #FFFFFF;
+  background-color: #003BE5;
+  border-radius: 2px;
+  border: none;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-top: 10px;
+  margin-right: 120px;
 }
