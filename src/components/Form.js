@@ -8,6 +8,7 @@ class Form extends Component {
   render() {
     return (
       <form className='container-Form' >
+        <h1>Adicionar nova carta</h1>
         <Input
           type='text'
           text='Nome'
@@ -23,7 +24,7 @@ class Form extends Component {
           <Input
             key={ index }
             type='number'
-            text={`atributo ${ input }`}
+            text={`atributo${ input }`}
             name={`atributo${ input }`}
             placeholder={`valor attr ${ input }`}
           /> 
