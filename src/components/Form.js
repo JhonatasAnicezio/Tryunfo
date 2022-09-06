@@ -54,7 +54,7 @@ class Form extends Component {
         />
         <Select
           text='Raridade'
-          name='cardTrunfo'
+          name='cardRare'
           value={ cardRare }
           onChange={ onInputChange }
           placeholder='selecione a raridade'
