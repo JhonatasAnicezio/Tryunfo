@@ -28,27 +28,27 @@
   color: #444955;
 }
 
-.container-inputName {
+.container-cardName {
   display: flex;
   flex-direction: column;
   width: 25%;
   margin-bottom: 10px;
 }
 
-.container-inputName input {
+.container-cardName input {
   margin-top: 5px;
   padding: 5px;
   border: none;
   border-bottom: solid 1px;
 }
 
-.container-inputDescription {
+.container-cardDescription {
   display: flex;
   flex-direction: column;
   width: 25%;
 }
 
-.container-inputDescription textarea {
+.container-cardDescription textarea {
   margin-top: 5px;
   margin-bottom: 10px;
   padding: 5px;
@@ -56,25 +56,25 @@
   border-bottom: solid 1px;
 }
 
-.container-atributo1 input,
-.container-atributo2 input,
-.container-atributo3 input {
+.container-cardAttr1 input,
+.container-cardAttr2 input,
+.container-cardAttr3 input {
   margin-top: 7px;
   padding: 3px;
 }
 
-.container-inputImage {
+.container-cardImage {
   margin-left: 10px;
 }
 
-.container-inputImage input {
+.container-cardImage input {
   margin-top: 15px;
   margin-left: 5px;
   width: 67%;
   padding: 3px;
 }
 
-.container-inputRare {
+.container-cardRare {
   display: flex;
   flex-direction: column;
   width: 25%;
@@ -82,7 +82,7 @@
   margin-bottom: 10px;
 }
 
-.container-inputRare select {
+.container-cardRare select {
   margin-top: 5px;
   padding: 5px;
   border: none;
