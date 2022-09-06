@@ -14,21 +14,21 @@ class Form extends Component {
       isSaveButtonDisabled, //*onSaveButtonClick, hasTrunfo
     } = values;
     const arrAttr = [ cardAttr1, cardAttr2, cardAttr3 ];
-    
+
     return (
       <form className='container-Form' >
         <h1>Adicionar nova carta</h1>
         <Input
           type='text'
           text='Nome'
-          name='inputName'
+          name='cardName'
           value={ cardName }
           onChange={ onInputChange }
           placeholder='nome da carta'
         />
         <Textarea
           text='Descrição'
-          name='inputDescription'
+          name='cardDescription'
           value={ cardDescription }
           onChange={ onInputChange }
           placeholder='descrição da carta'
@@ -38,8 +38,8 @@ class Form extends Component {
             key={ index }
             type='number'
             text={`Attr0${ input } `}
-            name={`atributo${ input }`}
-            value={ arrAttr[index] }
+            name={`cardAttr${ input }`}
+            value={ arrAttr[input] }
             onChange={ onInputChange }
             placeholder={`valor attr ${ input }`}
           /> 
@@ -47,14 +47,14 @@ class Form extends Component {
         <Input
           type='text'
           text='Imagem'
-          name='inputImage'
+          name='cardImage'
           value={ cardImage }
           onChange={ onInputChange }
           placeholder='endereço da imagem'
         />
         <Select
           text='Raridade'
-          name='inputRare'
+          name='cardTrunfo'
           value={ cardRare }
           onChange={ onInputChange }
           placeholder='selecione a raridade'
