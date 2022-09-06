@@ -7,12 +7,14 @@ import './Form.css';
 
 class Form extends Component {
   render() {
+    const { values, onInputChange } = this.props;
     const { 
       cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo,
-      isSaveButtonDisabled, onInputChange, //*onSaveButtonClick, hasTrunfo
-    } = this.props;
+      isSaveButtonDisabled, //*onSaveButtonClick, hasTrunfo
+    } = values;
     const arrAttr = [ cardAttr1, cardAttr2, cardAttr3 ];
+    
     return (
       <form className='container-Form' >
         <h1>Adicionar nova carta</h1>
@@ -75,16 +77,18 @@ class Form extends Component {
 }
 
 Form.propTypes = {
-  cardName: PropTypes.string.isRequired,
-  cardDescription: PropTypes.string.isRequired,
-  cardAttr1: PropTypes.string.isRequired,
-  cardAttr2: PropTypes.string.isRequired,
-  cardAttr3: PropTypes.string.isRequired,
-  cardImage: PropTypes.string.isRequired,
-  cardRare: PropTypes.string.isRequired,
-  cardTrunfo: PropTypes.bool.isRequired,
-  hasTrunfo: PropTypes.bool.isRequired,
-  isSaveButtonDisabled: PropTypes.bool.isRequired,
+  values: PropTypes.shape({
+    cardName: PropTypes.string.isRequired,
+    cardDescription: PropTypes.string.isRequired,
+    cardAttr1: PropTypes.string.isRequired,
+    cardAttr2: PropTypes.string.isRequired,
+    cardAttr3: PropTypes.string.isRequired,
+    cardImage: PropTypes.string.isRequired,
+    cardRare: PropTypes.string.isRequired,
+    cardTrunfo: PropTypes.bool.isRequired,
+    hasTrunfo: PropTypes.bool.isRequired,
+    isSaveButtonDisabled: PropTypes.bool.isRequired,
+  }),
   onInputChange: PropTypes.func.isRequired,
   onSaveButtonClick: PropTypes.func.isRequired,
 };
