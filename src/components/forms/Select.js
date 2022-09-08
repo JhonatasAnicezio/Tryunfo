@@ -22,7 +22,6 @@ function Select({ text, name, func, value, placeholder, options }) {
 
 Select.propTypes = {
   text: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   func: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,

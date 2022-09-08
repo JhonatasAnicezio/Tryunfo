@@ -18,7 +18,6 @@ function Textarea({ text, name, func, value, placeholder }) {
 
 Textarea.propTypes = {
   text: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   func: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
