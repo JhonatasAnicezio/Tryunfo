@@ -21,7 +21,7 @@ class Card extends Component {
             src={ cardImage }
             alt={`imagem de ${ cardImage }`}
           />
-          <p>{ cardTrunfo }</p>
+          { cardTrunfo && <p>Super Trunfo</p> }
         </div>
         <div className='description-Card'>
           <p>{ cardDescription }</p>
