@@ -99,7 +99,6 @@
   align-items: center;
   padding: 8px 32px;
   color: #FFFFFF;
-  background-color: #003BE5;
   border-radius: 2px;
   border: none;
   flex: none;
@@ -107,4 +106,12 @@
   flex-grow: 0;
   margin-top: 10px;
   margin-right: 120px;
+}
+
+.blue {
+  background-color: #003BE5;
+}
+
+.grey {
+  background-color: #444955;
 }
