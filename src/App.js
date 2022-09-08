@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
+import './App.css';
 
 class App extends Component {
   constructor() {
@@ -29,7 +30,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
         <Form
           values={ this.state }
           onInputChange={ this.handleOnChange }
