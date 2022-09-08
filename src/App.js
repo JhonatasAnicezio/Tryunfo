@@ -13,14 +13,13 @@ class App extends Component {
       cardImage: '',
       cardRare: 'normal',
       cardTrunfo: false,
-      isSaveButtonDisabled: true,
+      isSaveButtonDisabled: false,
     };
   }
 
   handleOnChange = async ({ target }) => {
-    const { name, value } = target;
-    await this.setState({ [name] : value });
-    console.log( this.state );
+    const { name, value, type, checked } = target;
+    this.setState({ [name] : type === 'checkbox' ? checked : value });
   };
 
   saveNewCard = () => {
