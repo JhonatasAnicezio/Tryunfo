@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './Card.css';
 
 class Card extends Component {
   render() {
@@ -9,7 +10,7 @@ class Card extends Component {
       cardAttr3, cardImage, cardRare, cardTrunfo 
     } = values;
     return(
-      <div>
+      <div className='container-Card'>
         <h1>{ cardName }</h1>
         <p>{ cardRare }</p>
         <img
