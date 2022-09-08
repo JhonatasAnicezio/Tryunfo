@@ -17,10 +17,14 @@ class App extends Component {
     };
   }
 
-  handleOnChange = ({ target }) => {
+  handleOnChange = async ({ target }) => {
     const { name, value } = target;
-    this.setState({ [name] : value });
+    await this.setState({ [name] : value });
     console.log( this.state );
+  };
+
+  saveNewCard = () => {
+    console.log(this.state);
   };
 
   render() {
@@ -29,6 +33,7 @@ class App extends Component {
         <Form
           values={ this.state }
           onInputChange={ this.handleOnChange }
+          onSaveButtonClick={ this.saveNewCard }
         />
       </div>
     );
