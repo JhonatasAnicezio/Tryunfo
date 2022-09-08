@@ -6,11 +6,10 @@ function Select({ text, name, func, value, placeholder, options }) {
     <div className={ `container-${name}` } >
       <label htmlFor={ name }>{ text }</label>
       <select name={ name } id={ name } onChange={ func }>
-        <option disabled selected>{ placeholder }</option>
+        <option defaultValue={ value } disabled selected>{ placeholder }</option>
         { options.map((opt, index) =>
           <option
             name={ opt }
-            value={ value }
             key={ index }
           >
             { opt }
