@@ -9,19 +9,28 @@ class Card extends Component {
       cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo 
     } = values;
+    const atributes = [ cardAttr1, cardAttr2, cardAttr3 ];
     return(
       <div className='container-Card'>
-        <h1>{ cardName }</h1>
-        <p>{ cardRare }</p>
-        <img
-          src={ cardImage }
-          alt={`imagem de ${ cardImage }`}
-        />
-        <p>{ cardTrunfo }</p>
-        <p>{ cardDescription }</p>
-        <p>{ cardAttr1 }</p>
-        <p>{ cardAttr2 }</p>
-        <p>{ cardAttr3 }</p>
+        <div className='header-Card'>
+          <h1>{ cardName }</h1>
+          <p>{ cardRare }</p>
+        </div>
+        <div className='image-Card'>
+          <img
+            src={ cardImage }
+            alt={`imagem de ${ cardImage }`}
+          />
+          <p>{ cardTrunfo }</p>
+        </div>
+        <div className='description-Card'>
+          <p>{ cardDescription }</p>
+          <ol>
+            { atributes.map((attr, index) =>
+              <li key={ index }>{ attr }</li>
+            ) }
+          </ol>
+        </div>
       </div>
     );
   }
