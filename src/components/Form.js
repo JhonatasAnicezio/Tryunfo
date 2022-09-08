@@ -57,7 +57,6 @@ class Form extends Component {
           name='cardRare'
           value={ cardRare }
           func={ onInputChange }
-          placeholder='selecione a raridade'
           options={[ 'normal', 'raro', 'muito raro' ]}
         />
         <Input

@@ -30,7 +30,6 @@ Select.propTypes = {
   func: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  placeholder: PropTypes.string.isRequired,
 };
 
 export default Select;
