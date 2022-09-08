@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Form from './components/Form';
+import Card from './components/Card';
 
 class App extends Component {
   constructor() {
@@ -33,6 +34,9 @@ class App extends Component {
           values={ this.state }
           onInputChange={ this.handleOnChange }
           onSaveButtonClick={ this.saveNewCard }
+        />
+        <Card
+          values={ this.state }
         />
       </div>
     );
