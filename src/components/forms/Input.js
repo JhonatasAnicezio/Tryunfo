@@ -24,7 +24,8 @@ Input.propTypes = {
   func: PropTypes.func.isRequired,
   value: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.number
+    PropTypes.number,
+    PropTypes.bool,
   ]).isRequired,
   placeholder: PropTypes.string,
 };
