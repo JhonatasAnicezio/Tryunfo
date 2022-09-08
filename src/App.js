@@ -21,8 +21,8 @@ class App extends Component {
 
   handleOnChange = async ({ target }) => {
     const { name, value, type, checked } = target;
-    this.setState({ [name] : type === 'checkbox' ? checked : value });
-    this.setState({ isSaveButtonDisabled: this.buttonDisabled() });
+    await this.setState({ [name] : type === 'checkbox' ? checked : value });
+    await this.setState({ isSaveButtonDisabled: this.buttonDisabled() });
   };
 
   buttonDisabled = () => {
