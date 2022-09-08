@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Input, { inputNumber } from './forms/Input';
 import Select from './forms/Select';
 import Textarea from './forms/Textarea';
+import Button from './forms/Button';
 import './Form.css';
 
 class Form extends Component {
@@ -66,13 +67,11 @@ class Form extends Component {
           value={ cardTrunfo }
           func={ onInputChange }
         />
-        <button
+        <Button
           type='button'
           disabled={ isSaveButtonDisabled }
           onClick={ onSaveButtonClick }
-        >
-          Salvar
-        </button>
+        />
       </form>
     );
   }
