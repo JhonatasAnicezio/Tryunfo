@@ -7,11 +7,11 @@ import './Form.css';
 
 class Form extends Component {
   render() {
-    const { values, onInputChange } = this.props;
+    const { values, onInputChange, onSaveButtonClick } = this.props;
     const {
       cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo,
-      isSaveButtonDisabled, //*onSaveButtonClick, hasTrunfo
+      isSaveButtonDisabled, //hasTrunfo
     } = values;
     const arrAttr = [ cardAttr1, cardAttr2, cardAttr3 ];
 
@@ -39,9 +39,9 @@ class Form extends Component {
             type='number'
             text={`Attr0${ input } `}
             name={`cardAttr${ input }`}
-            value={ arrAttr[input] }
+            value={ arrAttr[index] }
             func={ onInputChange }
-            placeholder={`valor attr ${ input }`}
+            placeholder={`valor attr${ input }`}
           /> 
         ) }
         <Input
@@ -69,8 +69,11 @@ class Form extends Component {
         />
         <button
           type='button'
-          onClick={ isSaveButtonDisabled }
-        >Salvar</button>
+          disabled={ isSaveButtonDisabled }
+          onClick={ onSaveButtonClick }
+        >
+          Salvar
+        </button>
       </form>
     );
   }
