@@ -62,7 +62,7 @@ class Form extends Component {
         <Input
           type='checkbox'
           text='super trunfo'
-          name='inputTrunfo'
+          name='cardTrunfo'
           value={ cardTrunfo }
           func={ onInputChange }
         />

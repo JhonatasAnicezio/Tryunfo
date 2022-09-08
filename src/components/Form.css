@@ -81,13 +81,13 @@
   background-color: #FFFFFF;
 }
 
-.container-inputTrunfo {
+.container-cardTrunfo {
   display: flex;
   flex-direction: row-reverse;
   margin-right: 60%;
 }
 
-.container-inputTrunfo input {
+.container-cardTrunfo input {
   margin-top: 6px;
   margin-bottom: 20px;
 }
