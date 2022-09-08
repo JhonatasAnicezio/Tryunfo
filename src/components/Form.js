@@ -8,7 +8,7 @@ import './Form.css';
 class Form extends Component {
   render() {
     const { values, onInputChange } = this.props;
-    const { 
+    const {
       cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo,
       isSaveButtonDisabled, //*onSaveButtonClick, hasTrunfo
@@ -23,14 +23,14 @@ class Form extends Component {
           text='Nome'
           name='cardName'
           value={ cardName }
-          onChange={ onInputChange }
+          func={ onInputChange }
           placeholder='nome da carta'
         />
         <Textarea
           text='Descrição'
           name='cardDescription'
           value={ cardDescription }
-          onChange={ onInputChange }
+          func={ onInputChange }
           placeholder='descrição da carta'
         />
         { inputNumber.map((input, index) =>
@@ -40,7 +40,7 @@ class Form extends Component {
             text={`Attr0${ input } `}
             name={`cardAttr${ input }`}
             value={ arrAttr[input] }
-            onChange={ onInputChange }
+            func={ onInputChange }
             placeholder={`valor attr ${ input }`}
           /> 
         ) }
@@ -49,14 +49,14 @@ class Form extends Component {
           text='Imagem'
           name='cardImage'
           value={ cardImage }
-          onChange={ onInputChange }
+          func={ onInputChange }
           placeholder='endereço da imagem'
         />
         <Select
           text='Raridade'
           name='cardRare'
           value={ cardRare }
-          onChange={ onInputChange }
+          func={ onInputChange }
           placeholder='selecione a raridade'
           options={[ 'normal', 'raro', 'muito raro' ]}
         />
@@ -65,7 +65,7 @@ class Form extends Component {
           text='super trunfo'
           name='inputTrunfo'
           value={ cardTrunfo }
-          onChange={ onInputChange }
+          func={ onInputChange }
         />
         <button
           type='button'
