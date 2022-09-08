@@ -16,6 +16,7 @@ class App extends Component {
       cardRare: 'normal',
       cardTrunfo: false,
       isSaveButtonDisabled: true,
+      cards: [],
     };
   }
 
@@ -54,8 +55,28 @@ class App extends Component {
     return true;
   };
 
-  saveNewCard = () => {
-    console.log(this.state);
+  saveNewCard = async () => {
+    const {
+      cardName, cardDescription, cardAttr1, cardAttr2,
+      cardAttr3, cardImage, cardRare, cardTrunfo, cards
+    } = this.state;
+
+    const objCart = {
+      cardName, cardDescription, cardAttr1, cardAttr2,
+      cardAttr3, cardImage, cardRare, cardTrunfo,
+    };
+    this.setState({
+      cardName:'',
+      cardDescription: '',
+      cardAttr1: '',
+      cardAttr2: '',
+      cardAttr3: '',
+      cardImage: '',
+      cardRare: 'normal',
+      cardTrunfo: false,
+      isSaveButtonDisabled: true,
+      cards: [...cards, objCart ]
+    });
   };
 
   render() {
