@@ -15,6 +15,7 @@ function Button({ type, disabled, onClick }) {
         </button>
       ) : (
         <button
+          className='blue'
           type={ type }
           disabled={ disabled }
           onClick={ onClick }
@@ -28,7 +29,7 @@ function Button({ type, disabled, onClick }) {
 
 Button.propTypes = {
   type: PropTypes.string.isRequired,
-  disabled: PropTypes.string.isRequired,
+  disabled: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
