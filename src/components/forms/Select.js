@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Select({ text, name, func, value, placeholder, options }) {
+function Select({ text, name, func, value, options }) {
   return (
     <div className={ `container-${name}` } >
       <label htmlFor={ name }>{ text }</label>
-      <select name={ name } id={ name } onChange={ func }>
-        <option defaultValue={ value } disabled selected>{ placeholder }</option>
+      <select
+        value={ value }
+        name={ name }
+        id={ name }
+        onChange={ func }
+      >
         { options.map((opt, index) =>
           <option
             name={ opt }
