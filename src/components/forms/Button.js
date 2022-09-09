@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Button({ type, disabled, onClick }) {
+function Button({ type, text, disabled, onClick }) {
   return (
     <>
       { disabled ? (
@@ -11,7 +11,7 @@ function Button({ type, disabled, onClick }) {
           disabled={ disabled }
           onClick={ onClick }
         >
-          Salvar
+          { text }
         </button>
       ) : (
         <button
@@ -20,7 +20,7 @@ function Button({ type, disabled, onClick }) {
           disabled={ disabled }
           onClick={ onClick }
         >
-          Salvar
+          { text }
         </button>
       ) }
     </>
@@ -29,6 +29,7 @@ function Button({ type, disabled, onClick }) {
 
 Button.propTypes = {
   type: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   disabled: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
 };

@@ -74,6 +74,7 @@ class Form extends Component {
         }
         <Button
           type='button'
+          text='Salvar'
           disabled={ isSaveButtonDisabled }
           onClick={ onSaveButtonClick }
         />
