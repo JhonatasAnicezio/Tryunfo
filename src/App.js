@@ -15,6 +15,7 @@ class App extends Component {
       cardImage: '',
       cardRare: 'normal',
       cardTrunfo: false,
+      hasTrunfo: false,
       isSaveButtonDisabled: true,
       cards: [],
     };
@@ -58,13 +59,16 @@ class App extends Component {
   saveNewCard = async () => {
     const {
       cardName, cardDescription, cardAttr1, cardAttr2,
-      cardAttr3, cardImage, cardRare, cardTrunfo, cards
+      cardAttr3, cardImage, cardRare, cardTrunfo, cards,
     } = this.state;
 
     const objCart = {
       cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo,
     };
+
+    this.verifyTrunfo();
+
     this.setState({
       cardName:'',
       cardDescription: '',
@@ -77,6 +81,13 @@ class App extends Component {
       isSaveButtonDisabled: true,
       cards: [...cards, objCart ]
     });
+  };
+
+  verifyTrunfo = () => {
+    const { cardTrunfo } = this.state;
+    if (cardTrunfo) {
+      this.setState({ hasTrunfo: true });
+    }
   };
 
   render() {
