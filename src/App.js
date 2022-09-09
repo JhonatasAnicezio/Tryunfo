@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
+import Button from './components/forms/Button';
 import './App.css';
 
 class App extends Component {
@@ -90,6 +91,15 @@ class App extends Component {
     }
   };
 
+  deleteCard = (card) => {
+    const { cards } = this.state;
+    const newList = cards;
+    newList.splice(cards.indexOf(card), 1);
+    this.setState({ cards: newList });
+
+    card.cardTrunfo && this.setState({ hasTrunfo: false });
+  };
+
   render() {
     const { cards } = this.state;
     return (
@@ -107,11 +117,18 @@ class App extends Component {
         <div
           className='container-listCards'
         >
-          { cards.map((card, index) => 
-            <Card
-              key={ index }
-              values={ card }
-            />
+          { cards.map((card, index) =>
+            <div key={ index }>
+              <Card
+                values={ card }
+              />
+              <Button
+                type='button'
+                text='Excluir'
+                disabled={ false }
+                onClick={ () => this.deleteCard(card) }
+              />
+            </div>
           ) }
         </div>
       </div>
