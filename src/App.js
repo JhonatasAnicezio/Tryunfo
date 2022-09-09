@@ -91,6 +91,7 @@ class App extends Component {
   };
 
   render() {
+    const { cards } = this.state;
     return (
       <div className='container'>
         <Form
@@ -101,6 +102,12 @@ class App extends Component {
         <Card
           values={ this.state }
         />
+        { cards.map((card, index) => 
+          <Card
+            key={ index }
+            values={ card }
+          />
+        ) }
       </div>
     );
   }
