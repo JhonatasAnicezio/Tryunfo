@@ -1,3 +1,13 @@
-.container {
+.container-create {
   display: flex;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-listCards {
+  display: flex;
+  flex-wrap: wrap;
 }

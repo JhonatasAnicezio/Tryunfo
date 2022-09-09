@@ -93,21 +93,27 @@ class App extends Component {
   render() {
     const { cards } = this.state;
     return (
-      <div className='container'>
-        <Form
-          values={ this.state }
-          onInputChange={ this.handleOnChange }
-          onSaveButtonClick={ this.saveNewCard }
-        />
-        <Card
-          values={ this.state }
-        />
-        { cards.map((card, index) => 
-          <Card
-            key={ index }
-            values={ card }
+      <div className='container-main'>
+        <div className='container-create'>
+          <Form
+            values={ this.state }
+            onInputChange={ this.handleOnChange }
+            onSaveButtonClick={ this.saveNewCard }
           />
-        ) }
+          <Card
+            values={ this.state }
+          />
+        </div>
+        <div
+          className='container-listCards'
+        >
+          { cards.map((card, index) => 
+            <Card
+              key={ index }
+              values={ card }
+            />
+          ) }
+        </div>
       </div>
     );
   }
