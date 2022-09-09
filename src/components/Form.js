@@ -12,7 +12,7 @@ class Form extends Component {
     const {
       cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo,
-      isSaveButtonDisabled, //hasTrunfo
+      isSaveButtonDisabled, hasTrunfo
     } = values;
     const arrAttr = [ cardAttr1, cardAttr2, cardAttr3 ];
 
@@ -60,13 +60,18 @@ class Form extends Component {
           func={ onInputChange }
           options={[ 'normal', 'raro', 'muito raro' ]}
         />
-        <Input
-          type='checkbox'
-          text='super trunfo'
-          name='cardTrunfo'
-          value={ cardTrunfo }
-          func={ onInputChange }
-        />
+        { hasTrunfo ?
+          (<p>Você já tem um Super Trunfo em seu baralho</p>) :
+          (
+            <Input
+              type='checkbox'
+              text='super trunfo'
+              name='cardTrunfo'
+              value={ cardTrunfo }
+              func={ onInputChange }
+            />
+          )
+        }
         <Button
           type='button'
           disabled={ isSaveButtonDisabled }
