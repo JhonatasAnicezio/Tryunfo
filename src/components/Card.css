@@ -69,8 +69,7 @@
 
 .description-Card p {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap;
   margin-left: 5%;
   width: 90%;
   height: 75%;
