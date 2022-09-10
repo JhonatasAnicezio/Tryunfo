@@ -118,7 +118,10 @@ class App extends Component {
           className='container-listCards'
         >
           { cards.map((card, index) =>
-            <div key={ index }>
+            <div
+              className='card'
+              key={ index }
+            >
               <Card
                 values={ card }
               />
