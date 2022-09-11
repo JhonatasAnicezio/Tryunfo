@@ -4,6 +4,7 @@ import Card from './components/Card';
 import Button from './components/forms/Button';
 import { game_of_Cards } from './services';
 import './App.css';
+import Input from './components/forms/Input';
 
 class App extends Component {
   constructor() {
@@ -20,6 +21,7 @@ class App extends Component {
       hasTrunfo: false,
       isSaveButtonDisabled: true,
       cards: game_of_Cards,
+      filter: '',
     };
   }
 
@@ -64,7 +66,7 @@ class App extends Component {
       cardAttr3, cardImage, cardRare, cardTrunfo, cards,
     } = this.state;
 
-    const objCart = {
+    const objCard = {
       cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo,
     };
@@ -81,7 +83,7 @@ class App extends Component {
       cardRare: 'normal',
       cardTrunfo: false,
       isSaveButtonDisabled: true,
-      cards: [...cards, objCart ]
+      cards: [...cards, objCard ]
     });
   };
 
@@ -101,8 +103,15 @@ class App extends Component {
     card.cardTrunfo && this.setState({ hasTrunfo: false });
   };
 
+  filterCard = () => {
+    const { cards, filter } = this.state;
+    const required = cards.filter((card) => card.cardName.includes(filter));
+    
+    return required;
+  };
+
   render() {
-    const { cards } = this.state;
+    const { filter } = this.state;
     return (
       <div className='container-main'>
         <div className='container-create'>
@@ -115,10 +124,19 @@ class App extends Component {
             values={ this.state }
           />
         </div>
+        <Input
+          text='Filtros de Busca'
+          type='text'
+          id='search'
+          name='filter'
+          value={ filter }
+          func={ this.handleOnChange }
+          placeholder='digite o nome da carta'
+        />
         <div
           className='container-listCards'
         >
-          { cards.map((card, index) =>
+          { this.filterCard().map((card, index) =>
             <div
               className='card'
               key={ index }
