@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
 import Button from './components/forms/Button';
+import { game_of_Cards } from './services';
 import './App.css';
 
 class App extends Component {
@@ -18,7 +19,7 @@ class App extends Component {
       cardTrunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
-      cards: [],
+      cards: game_of_Cards,
     };
   }
 
