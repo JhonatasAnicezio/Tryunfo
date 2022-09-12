@@ -13,7 +13,7 @@ class Card extends Component {
     return(
       <div className='container-Card'>
         <div className='header-Card'>
-          <h1>{ cardName }</h1>
+          <h2>{ cardName }</h2>
           <p>{ cardRare }</p>
         </div>
         <div className='image-Card'>
