@@ -105,7 +105,11 @@ class App extends Component {
 
   filterCard = () => {
     const { cards, filter } = this.state;
-    const required = cards.filter((card) => card.cardName.includes(filter));
+    const required = cards.filter((card) => {
+      const cardL = card.cardName.toLowerCase();
+      const filt = filter.toLowerCase();
+      return cardL.includes(filt);
+    });
     
     return required;
   };
