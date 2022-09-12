@@ -5,6 +5,7 @@ import Button from './components/forms/Button';
 import { game_of_Cards } from './services';
 import './App.css';
 import Input from './components/forms/Input';
+import Select from './components/forms/Select';
 
 class App extends Component {
   constructor() {
@@ -22,6 +23,7 @@ class App extends Component {
       isSaveButtonDisabled: true,
       cards: game_of_Cards,
       filter: '',
+      searchRare: 'todas',
     };
   }
 
@@ -104,18 +106,21 @@ class App extends Component {
   };
 
   filterCard = () => {
-    const { cards, filter } = this.state;
+    const { cards, filter, searchRare } = this.state;
     const required = cards.filter((card) => {
       const cardL = card.cardName.toLowerCase();
       const filt = filter.toLowerCase();
       return cardL.includes(filt);
     });
-    
-    return required;
+    return required.filter((cards) => {
+      if (searchRare === 'todas') {
+        return required;
+      } return cards.cardRare === searchRare;
+    });
   };
 
   render() {
-    const { filter } = this.state;
+    const { filter, searchRare } = this.state;
     return (
       <div className='container-main'>
         <div className='container-create'>
@@ -136,6 +141,13 @@ class App extends Component {
           value={ filter }
           func={ this.handleOnChange }
           placeholder='digite o nome da carta'
+        />
+        <Select
+          text='Selecione raridade'
+          name='searchRare'
+          func={ this.handleOnChange }
+          value={ searchRare }
+          options={['todas', 'normal', 'raro', 'muito raro']}
         />
         <div
           className='container-listCards'
