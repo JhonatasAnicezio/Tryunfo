@@ -24,6 +24,7 @@ class App extends Component {
       cards: game_of_Cards,
       filter: '',
       searchRare: 'todas',
+      checkTrunfo: false,
     };
   }
 
@@ -106,13 +107,15 @@ class App extends Component {
   };
 
   filterCard = () => {
-    const { cards, filter, searchRare } = this.state;
+    const { cards, filter, searchRare, checkTrunfo } = this.state;
     const required = cards.filter((card) => {
       const cardL = card.cardName.toLowerCase();
       const filt = filter.toLowerCase();
       return cardL.includes(filt);
     });
-    return required.filter((cards) => {
+    if (checkTrunfo) {
+      return required.filter((card) => card.cardTrunfo === true);
+    } return required.filter((cards) => {
       if (searchRare === 'todas') {
         return required;
       } return cards.cardRare === searchRare;
@@ -120,7 +123,7 @@ class App extends Component {
   };
 
   render() {
-    const { filter, searchRare } = this.state;
+    const { filter, searchRare, checkTrunfo } = this.state;
     return (
       <div className='container-main'>
         <div className='container-create'>
@@ -148,6 +151,14 @@ class App extends Component {
           func={ this.handleOnChange }
           value={ searchRare }
           options={['todas', 'normal', 'raro', 'muito raro']}
+        />
+        <Input
+          text='Super Trunfo'
+          type='checkbox'
+          id='searchTrunfo'
+          name='checkTrunfo'
+          value={ checkTrunfo }
+          func={ this.handleOnChange }
         />
         <div
           className='container-listCards'
