@@ -18,66 +18,72 @@ class Form extends Component {
 
     return (
       <form className='container-Form' >
-        <h1>Adicionar nova carta</h1>
-        <Input
-          type='text'
-          text='Nome'
-          name='cardName'
-          value={ cardName }
-          func={ onInputChange }
-          placeholder='nome da carta'
-        />
-        <Textarea
-          text='Descrição'
-          name='cardDescription'
-          value={ cardDescription }
-          func={ onInputChange }
-          placeholder='descrição da carta'
-        />
-        { inputNumber.map((input, index) =>
+        <div className='title-form'>
+          <h2>Adicionar nova carta</h2>
+        </div>
+        <div className='container-inputs'>
           <Input
-            key={ index }
-            type='number'
-            text={`Attr0${ input } `}
-            name={`cardAttr${ input }`}
-            value={ arrAttr[index] }
+            type='text'
+            text='Nome'
+            name='cardName'
+            value={ cardName }
             func={ onInputChange }
-            placeholder={`valor attr${ input }`}
-          /> 
-        ) }
-        <Input
-          type='text'
-          text='Imagem'
-          name='cardImage'
-          value={ cardImage }
-          func={ onInputChange }
-          placeholder='endereço da imagem'
-        />
-        <Select
-          text='Raridade'
-          name='cardRare'
-          value={ cardRare }
-          func={ onInputChange }
-          options={[ 'normal', 'raro', 'muito raro' ]}
-        />
-        { hasTrunfo ?
-          (<p>Você já tem um Super Trunfo em seu baralho</p>) :
-          (
+            placeholder='nome da carta'
+          />
+          <Textarea
+            text='Descrição'
+            name='cardDescription'
+            value={ cardDescription }
+            func={ onInputChange }
+            placeholder='descrição da carta'
+          />
+          { inputNumber.map((input, index) =>
             <Input
-              type='checkbox'
-              text='super trunfo'
-              name='cardTrunfo'
-              value={ cardTrunfo }
+              key={ index }
+              type='number'
+              text={`Attr0${ input } `}
+              name={`cardAttr${ input }`}
+              value={ arrAttr[index] }
               func={ onInputChange }
+              placeholder={`valor attr${ input }`}
+            /> 
+          ) }
+          <Input
+            type='text'
+            text='Imagem'
+            name='cardImage'
+            value={ cardImage }
+            func={ onInputChange }
+            placeholder='endereço da imagem'
+          />
+          <Select
+            text='Raridade'
+            name='cardRare'
+            value={ cardRare }
+            func={ onInputChange }
+            options={[ 'normal', 'raro', 'muito raro' ]}
+          />
+          { hasTrunfo ?
+            (<p>Você já tem um Super Trunfo em seu baralho</p>) :
+            (
+              <Input
+                type='checkbox'
+                text='super trunfo'
+                name='cardTrunfo'
+                value={ cardTrunfo }
+                func={ onInputChange }
+              />
+            )
+          }
+          <div className='container-button'>
+            <Button
+              type='button'
+              text='Salvar'
+              disabled={ isSaveButtonDisabled }
+              onClick={ onSaveButtonClick }
             />
-          )
-        }
-        <Button
-          type='button'
-          text='Salvar'
-          disabled={ isSaveButtonDisabled }
-          onClick={ onSaveButtonClick }
-        />
+          </div>
+        </div>
       </form>
     );
   }

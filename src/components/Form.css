@@ -1,26 +1,30 @@
 .container-Form {
-  left: 0px;
-  top: 0px;
-
-  font-family: 'Verdana';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 150%;
-  color: #3D495C;
-
-  height: 550px;
-  width: 300px;
-  background: #FAFAFA;
-  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 405px;
+  height: 485px;
+  background-color: #2C2323;
+  border-radius: 10px;
 }
 
-.container-Form h1 {
-  font-family: 'Epilogue';
-  font-size: 28px;
-  margin-bottom: 25px;
-  line-height: 29px;
-  color: #444955;
+.title-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+.container-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+  margin-top: 10px;
+  color: #FFFFFF;
 }
 
 .container-cardName {
@@ -34,7 +38,9 @@
   margin-top: 5px;
   padding: 5px;
   border: none;
-  border-bottom: solid 1px;
+  color: #FFFFFF;
+  background-color: #2C2323;
+  border-bottom: solid 1px #FFFFFF;
 }
 
 .container-cardDescription {
@@ -48,21 +54,40 @@
   margin-bottom: 10px;
   padding: 5px;
   border: none;
-  border-bottom: solid 1px;
+  color: #FFFFFF;
+  background-color: #2C2323;
+  border-bottom: solid 1px #FFFFFF;
+}
+
+.container-cardAttr1 ,
+.container-cardAttr2 ,
+.container-cardAttr3 {
+  width: 100%;
 }
 
 .container-cardAttr1 input,
 .container-cardAttr2 input,
 .container-cardAttr3 input {
   margin-top: 7px;
-  width: 79%;
+  width: 80%;
   padding: 3px;
 }
 
+.container-cardImage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .container-cardImage input {
-  margin-top: 15px;
-  width: 76%;
-  padding: 3px;
+  margin-top: 5px;
+  padding: 5px;
+  border: none;
+  color: #FFFFFF;
+  background-color: #2C2323;
+  border-bottom: solid 1px #FFFFFF;
 }
 
 .container-cardRare {
@@ -77,8 +102,9 @@
   margin-top: 5px;
   padding: 5px;
   border: none;
-  border-bottom: solid 1px;
-  background-color: #FFFFFF;
+  color: #FFFFFF;
+  background-color: #2C2323;
+  border-bottom: solid 1px #FFFFFF;
 }
 
 .container-cardTrunfo {
@@ -92,6 +118,7 @@
   margin-bottom: 20px;
 }
 
+
 .container-Form button {
   display: flex;
   flex-direction: row;
@@ -104,14 +131,19 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin-top: 10px;
-  margin-right: 120px;
 }
 
 .blue {
-  background-color: #003BE5;
+  background-color: #6C0808;
 }
 
 .grey {
   background-color: #444955;
+}
+
+.container-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
