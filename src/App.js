@@ -173,6 +173,9 @@ class App extends Component {
             />
           </div>
         </div>
+        <div className='title-list'>
+          <h2>Todas as Cartas</h2>
+        </div>
         <div
           className='container-listCards'
         >
