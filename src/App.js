@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
 import Button from './components/forms/Button';
-import { game_of_Cards } from './services';
 import './App.css';
 import Input from './components/forms/Input';
 import Select from './components/forms/Select';
@@ -21,7 +20,7 @@ class App extends Component {
       cardTrunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
-      cards: game_of_Cards,
+      cards: [],
       filter: '',
       searchRare: 'todas',
       checkTrunfo: false,
@@ -126,40 +125,52 @@ class App extends Component {
     const { filter, searchRare, checkTrunfo } = this.state;
     return (
       <div className='container-main'>
-        <div className='container-create'>
-          <Form
-            values={ this.state }
-            onInputChange={ this.handleOnChange }
-            onSaveButtonClick={ this.saveNewCard }
-          />
-          <Card
-            values={ this.state }
-          />
+        <h1>Tryunfo</h1>
+        <div className='container-body'>
+          <div>
+            <div className='container-formFilter'>
+              <Form
+                values={ this.state }
+                onInputChange={ this.handleOnChange }
+                onSaveButtonClick={ this.saveNewCard }
+              />
+              <div className='container-filters'>
+                <Input
+                  text='Filtros de Busca'
+                  type='text'
+                  id='search'
+                  name='filter'
+                  value={ filter }
+                  func={ this.handleOnChange }
+                  placeholder='digite o nome da carta'
+                />
+                <Select
+                  text='Selecione raridade'
+                  name='searchRare'
+                  func={ this.handleOnChange }
+                  value={ searchRare }
+                  options={['todas', 'normal', 'raro', 'muito raro']}
+                />
+                <Input
+                  text='Super Trunfo'
+                  type='checkbox'
+                  id='searchTrunfo'
+                  name='checkTrunfo'
+                  value={ checkTrunfo }
+                  func={ this.handleOnChange }
+                />
+              </div>
+            </div>
+          </div>
+          <div className='container-render'>
+            <div className='container-title'>
+              <h2>Pré-visualização</h2>
+            </div>
+            <Card
+              values={ this.state }
+            />
+          </div>
         </div>
-        <Input
-          text='Filtros de Busca'
-          type='text'
-          id='search'
-          name='filter'
-          value={ filter }
-          func={ this.handleOnChange }
-          placeholder='digite o nome da carta'
-        />
-        <Select
-          text='Selecione raridade'
-          name='searchRare'
-          func={ this.handleOnChange }
-          value={ searchRare }
-          options={['todas', 'normal', 'raro', 'muito raro']}
-        />
-        <Input
-          text='Super Trunfo'
-          type='checkbox'
-          id='searchTrunfo'
-          name='checkTrunfo'
-          value={ checkTrunfo }
-          func={ this.handleOnChange }
-        />
         <div
           className='container-listCards'
         >
