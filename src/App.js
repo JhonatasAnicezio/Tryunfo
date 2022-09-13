@@ -5,7 +5,6 @@ import Button from './components/forms/Button';
 import './App.css';
 import Input from './components/forms/Input';
 import Select from './components/forms/Select';
-import { game_of_Cards } from './services';
 
 class App extends Component {
   constructor() {
@@ -21,7 +20,7 @@ class App extends Component {
       cardTrunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
-      cards: game_of_Cards,
+      cards: [],
       filter: '',
       searchRare: 'todas',
       checkTrunfo: false,
