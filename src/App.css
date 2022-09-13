@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #FFFFFF;
   width: 100%;
   font-family: 'Baskerville';
 }
@@ -13,7 +14,6 @@
   font-size: 50px;
   padding: 10px;
   width: 100%;
-  color: #FFFFFF;
   background-color: #6C0808;
 }
 
@@ -29,8 +29,52 @@
 .container-filters {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #2C2323;
+  height: 180px;
   border-radius: 10px;
+}
+
+.container-inputsFilts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 70%;
+  height: 100%;
+}
+
+.container-filter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container-filter input {
+  padding: 5px;
+  border: none;
+  background-color: #2C2323;
+  border-bottom: solid 1px #FFFFFF;
+}
+
+.container-searchRare {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container-searchRare select {
+  padding: 5px;
+  border: none;
+  color: #FFFFFF;
+  background-color: #2C2323;
+  border-bottom: solid 1px #FFFFFF;
+}
+
+.container-checkTrunfo {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 60%;
 }
 
 .container-render {
@@ -46,7 +90,6 @@
 }
 
 .container-title {
-  color: #FFFFFF;
   margin-left: 40px;
   font-size: 30px;
   width: 100%;

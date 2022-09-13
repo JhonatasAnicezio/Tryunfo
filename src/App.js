@@ -135,30 +135,32 @@ class App extends Component {
                 onSaveButtonClick={ this.saveNewCard }
               />
               <div className='container-filters'>
-                <Input
-                  text='Filtros de Busca'
-                  type='text'
-                  id='search'
-                  name='filter'
-                  value={ filter }
-                  func={ this.handleOnChange }
-                  placeholder='digite o nome da carta'
-                />
-                <Select
-                  text='Selecione raridade'
-                  name='searchRare'
-                  func={ this.handleOnChange }
-                  value={ searchRare }
-                  options={['todas', 'normal', 'raro', 'muito raro']}
-                />
-                <Input
-                  text='Super Trunfo'
-                  type='checkbox'
-                  id='searchTrunfo'
-                  name='checkTrunfo'
-                  value={ checkTrunfo }
-                  func={ this.handleOnChange }
-                />
+                <div className='container-inputsFilts'>
+                  <Input
+                    text='Filtros de Busca'
+                    type='text'
+                    id='search'
+                    name='filter'
+                    value={ filter }
+                    func={ this.handleOnChange }
+                    placeholder='digite o nome da carta'
+                  />
+                  <Select
+                    text='Selecione raridade'
+                    name='searchRare'
+                    func={ this.handleOnChange }
+                    value={ searchRare }
+                    options={['todas', 'normal', 'raro', 'muito raro']}
+                  />
+                  <Input
+                    text='Super Trunfo'
+                    type='checkbox'
+                    id='searchTrunfo'
+                    name='checkTrunfo'
+                    value={ checkTrunfo }
+                    func={ this.handleOnChange }
+                  />
+                </div>
               </div>
             </div>
           </div>
