@@ -25,7 +25,7 @@ class Card extends Component {
         </div>
         <div className='description-Card'>
           <textarea
-            disabled='true'
+            disabled={ true }
             value={ cardDescription  }
           />
           <ol>
