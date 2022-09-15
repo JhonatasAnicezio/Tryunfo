@@ -24,7 +24,10 @@ class Card extends Component {
           { cardTrunfo && <p>Super Trunfo</p> }
         </div>
         <div className='description-Card'>
-          <p>{ cardDescription }</p>
+          <textarea
+            disabled='true'
+            value={ cardDescription  }
+          />
           <ol>
             { atributes.map((attr, index) =>
               <li key={ index }>{ attr }</li>

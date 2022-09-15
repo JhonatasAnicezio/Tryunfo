@@ -11,6 +11,7 @@ function Textarea({ text, name, func, value, placeholder }) {
         value={ value }
         onChange={ func }
         placeholder={ placeholder }
+        maxLength='200'
       />
     </div>
   );
