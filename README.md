@@ -1,6 +1,8 @@
 <h1>Projeto Tryunfo</h1>
 <p> Este projeto consiste em um criador de cartas do jogo SuperTrunfo. Voce podera ver sua carta em uma pre-visualizaçao durante a construçao, e tambem ver as cartas ja existentes em seu baralho, sempre respeitando as regras do jogo. Voce tambem podera filtrar as cartas de seu baralho para encontrar com mais facilidade.</p>
 <p> O projeto foi criado dentro da escola de formação beTrybe, a fim de praticar a avaliar os conhecimentos aprendidos sobre Formularios, e estados de componentes.</p>
+<br>
+<img src='./public/project.png' />
 
 <h1>Tecnologias utilizadas:</h1>
 <ul>
